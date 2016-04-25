@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2256591CC9057500C5E72E /* TransactionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2256581CC9057500C5E72E /* TransactionsManager.m */; };
 		CE5A00081CBF863B005C8F58 /* SafePocketUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A00071CBF863B005C8F58 /* SafePocketUITests.m */; };
 		CE5AFFE11CBF863B005C8F58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5AFFE01CBF863B005C8F58 /* main.m */; };
 		CE5AFFE41CBF863B005C8F58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5AFFE31CBF863B005C8F58 /* AppDelegate.m */; };
@@ -16,6 +17,13 @@
 		CE5AFFEF1CBF863B005C8F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5AFFEE1CBF863B005C8F58 /* Assets.xcassets */; };
 		CE5AFFF21CBF863B005C8F58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5AFFF01CBF863B005C8F58 /* LaunchScreen.storyboard */; };
 		CE5AFFFD1CBF863B005C8F58 /* SafePocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5AFFFC1CBF863B005C8F58 /* SafePocketTests.m */; };
+		CE5DAF0F1CC4C06000EA2DAE /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5DAF0E1CC4C06000EA2DAE /* LocalAuthentication.framework */; };
+		CE5DAF121CC4C76700EA2DAE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DAF111CC4C76700EA2DAE /* LoginViewController.m */; };
+		CE5DAF141CC4CE1B00EA2DAE /* fingerprint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5DAF131CC4CE1B00EA2DAE /* fingerprint@2x.png */; };
+		CE5DAF161CC4CFD100EA2DAE /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5DAF151CC4CFD100EA2DAE /* down@2x.png */; };
+		CE5DAF1A1CC4D70800EA2DAE /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5DAF191CC4D70800EA2DAE /* TransactionsViewController.m */; };
+		CEF9C3401CC4ACBC0024FBE6 /* logo_p@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF9C33F1CC4ACBC0024FBE6 /* logo_p@2x.jpg */; };
+		CEF9C3421CC4ACE50024FBE6 /* logo_aci@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9C3411CC4ACE50024FBE6 /* logo_aci@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE2256571CC9057500C5E72E /* TransactionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionsManager.h; path = Transactions/TransactionsManager.h; sourceTree = "<group>"; };
+		CE2256581CC9057500C5E72E /* TransactionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionsManager.m; path = Transactions/TransactionsManager.m; sourceTree = "<group>"; };
 		CE5A00031CBF863B005C8F58 /* SafePocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafePocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A00071CBF863B005C8F58 /* SafePocketUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafePocketUITests.m; sourceTree = "<group>"; };
 		CE5A00091CBF863B005C8F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +63,15 @@
 		CE5AFFF81CBF863B005C8F58 /* SafePocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafePocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5AFFFC1CBF863B005C8F58 /* SafePocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafePocketTests.m; sourceTree = "<group>"; };
 		CE5AFFFE1CBF863B005C8F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5DAF0E1CC4C06000EA2DAE /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		CE5DAF101CC4C76700EA2DAE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Authentication/LoginViewController.h; sourceTree = "<group>"; };
+		CE5DAF111CC4C76700EA2DAE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Authentication/LoginViewController.m; sourceTree = "<group>"; };
+		CE5DAF131CC4CE1B00EA2DAE /* fingerprint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprint@2x.png"; sourceTree = "<group>"; };
+		CE5DAF151CC4CFD100EA2DAE /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
+		CE5DAF181CC4D70800EA2DAE /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionsViewController.h; path = Transactions/TransactionsViewController.h; sourceTree = "<group>"; };
+		CE5DAF191CC4D70800EA2DAE /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionsViewController.m; path = Transactions/TransactionsViewController.m; sourceTree = "<group>"; };
+		CEF9C33F1CC4ACBC0024FBE6 /* logo_p@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo_p@2x.jpg"; sourceTree = "<group>"; };
+		CEF9C3411CC4ACE50024FBE6 /* logo_aci@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_aci@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5DAF0F1CC4C06000EA2DAE /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +112,7 @@
 		CE5AFFD31CBF863B005C8F58 = {
 			isa = PBXGroup;
 			children = (
+				CE5DAF0E1CC4C06000EA2DAE /* LocalAuthentication.framework */,
 				CE5AFFDE1CBF863B005C8F58 /* SafePocket */,
 				CE5AFFFB1CBF863B005C8F58 /* SafePocketTests */,
 				CE5A00061CBF863B005C8F58 /* SafePocketUITests */,
@@ -112,6 +133,8 @@
 		CE5AFFDE1CBF863B005C8F58 /* SafePocket */ = {
 			isa = PBXGroup;
 			children = (
+				CE5DAF171CC4D6EB00EA2DAE /* Transactions */,
+				CE5DAF0D1CC4BC9C00EA2DAE /* Authentication */,
 				CE5AFFE21CBF863B005C8F58 /* AppDelegate.h */,
 				CE5AFFE31CBF863B005C8F58 /* AppDelegate.m */,
 				CE5AFFE51CBF863B005C8F58 /* ViewController.h */,
@@ -129,6 +152,7 @@
 		CE5AFFDF1CBF863B005C8F58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEF9C33E1CC4AC390024FBE6 /* UIResources */,
 				CE5AFFE01CBF863B005C8F58 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +165,37 @@
 				CE5AFFFE1CBF863B005C8F58 /* Info.plist */,
 			);
 			path = SafePocketTests;
+			sourceTree = "<group>";
+		};
+		CE5DAF0D1CC4BC9C00EA2DAE /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CE5DAF101CC4C76700EA2DAE /* LoginViewController.h */,
+				CE5DAF111CC4C76700EA2DAE /* LoginViewController.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		CE5DAF171CC4D6EB00EA2DAE /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				CE5DAF181CC4D70800EA2DAE /* TransactionsViewController.h */,
+				CE5DAF191CC4D70800EA2DAE /* TransactionsViewController.m */,
+				CE2256571CC9057500C5E72E /* TransactionsManager.h */,
+				CE2256581CC9057500C5E72E /* TransactionsManager.m */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+		CEF9C33E1CC4AC390024FBE6 /* UIResources */ = {
+			isa = PBXGroup;
+			children = (
+				CE5DAF151CC4CFD100EA2DAE /* down@2x.png */,
+				CE5DAF131CC4CE1B00EA2DAE /* fingerprint@2x.png */,
+				CEF9C3411CC4ACE50024FBE6 /* logo_aci@2x.png */,
+				CEF9C33F1CC4ACBC0024FBE6 /* logo_p@2x.jpg */,
+			);
+			name = UIResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +269,7 @@
 					};
 					CE5AFFDB1CBF863B005C8F58 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = L87LYZ5K72;
 					};
 					CE5AFFF71CBF863B005C8F58 = {
 						CreatedOnToolsVersion = 7.3;
@@ -254,7 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5AFFF21CBF863B005C8F58 /* LaunchScreen.storyboard in Resources */,
+				CE5DAF141CC4CE1B00EA2DAE /* fingerprint@2x.png in Resources */,
 				CE5AFFEF1CBF863B005C8F58 /* Assets.xcassets in Resources */,
+				CEF9C3421CC4ACE50024FBE6 /* logo_aci@2x.png in Resources */,
+				CE5DAF161CC4CFD100EA2DAE /* down@2x.png in Resources */,
+				CEF9C3401CC4ACBC0024FBE6 /* logo_p@2x.jpg in Resources */,
 				CE5AFFEA1CBF863B005C8F58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,9 +334,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5AFFED1CBF863B005C8F58 /* SafePocket.xcdatamodeld in Sources */,
+				CE5DAF1A1CC4D70800EA2DAE /* TransactionsViewController.m in Sources */,
 				CE5AFFE71CBF863B005C8F58 /* ViewController.m in Sources */,
 				CE5AFFE41CBF863B005C8F58 /* AppDelegate.m in Sources */,
 				CE5AFFE11CBF863B005C8F58 /* main.m in Sources */,
+				CE2256591CC9057500C5E72E /* TransactionsManager.m in Sources */,
+				CE5DAF121CC4C76700EA2DAE /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +480,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SafePocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.too.SafePocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -428,10 +494,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SafePocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.too.SafePocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -491,6 +560,7 @@
 				CE5A000E1CBF863B005C8F58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5A000F1CBF863B005C8F58 /* Build configuration list for PBXNativeTarget "SafePocketTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +569,7 @@
 				CE5A00111CBF863B005C8F58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5A00121CBF863B005C8F58 /* Build configuration list for PBXNativeTarget "SafePocketUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +578,7 @@
 				CE5A00141CBF863B005C8F58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5AFFD71CBF863B005C8F58 /* Build configuration list for PBXProject "SafePocket" */ = {
 			isa = XCConfigurationList;
