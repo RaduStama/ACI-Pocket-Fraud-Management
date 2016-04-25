@@ -10,6 +10,9 @@
 
 @interface TransactionsManager : NSObject
 
--(TransactionsManager*)getSharedInstance;
++(TransactionsManager*)sharedInstance;
+
+
+-(void)requestTransactions;
 
 @end
