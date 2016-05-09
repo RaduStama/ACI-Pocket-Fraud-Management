@@ -7,9 +7,11 @@
 //
 
 #import "TransactionsViewController.h"
+#import "TransactionsManager.h"
+#define CELL_ID @"transactions_cell"
 
 @interface TransactionsViewController ()
-
+@property (strong,nonatomic) NSMutableArray *transactionsArray;
 @end
 
 @implementation TransactionsViewController
@@ -20,8 +22,8 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _transactionsArray = [TransactionsManager sharedInstance].transactions;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,56 +34,65 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _transactionsArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_ID forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = [NSString stringWithFormat:@"Transaction %li",indexPath.row];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
+
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
-*/
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *selectedIndexDictionary = _transactionsArray[indexPath.row];
+    
+    UIViewController *controller = [UIViewController new];
+    
+     //add a background image
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, controller.view.frame.size.width, controller.view.frame.size.height)];
+    imageView.image = [UIImage imageNamed:@"background.jpg"];
+    [controller.view addSubview:imageView];
+    
+    CGRect frame = CGRectMake(30, 50, controller.view.frame.size.width-60, 50);
+    //make any key editable
+    for (NSString *key in selectedIndexDictionary.allKeys){
+        //instantiate a new text view and customize it
+        UITextView *textView = [UITextView new];
+        textView.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.65f];
+        [textView setText:[selectedIndexDictionary objectForKey:key]];
+        [textView setFont:[UIFont systemFontOfSize:14]];
+        textView.frame = frame;
+        frame.origin.y = frame.origin.y + 60;
+        //add the text view to the controller's view
+        [controller.view addSubview:textView];
+     }
+    [self presentViewController:controller animated:YES completion:nil];
+}
 /*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
 }
 */
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE2256591CC9057500C5E72E /* TransactionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2256581CC9057500C5E72E /* TransactionsManager.m */; };
+		CE243BF01CE07A470082FF8C /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE243BEF1CE07A470082FF8C /* background@2x.jpg */; };
+		CE243BF21CE0893B0082FF8C /* login_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE243BF11CE0893B0082FF8C /* login_background@2x.png */; };
 		CE5A00081CBF863B005C8F58 /* SafePocketUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A00071CBF863B005C8F58 /* SafePocketUITests.m */; };
 		CE5AFFE11CBF863B005C8F58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5AFFE01CBF863B005C8F58 /* main.m */; };
 		CE5AFFE41CBF863B005C8F58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5AFFE31CBF863B005C8F58 /* AppDelegate.m */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		CE2256571CC9057500C5E72E /* TransactionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionsManager.h; path = Transactions/TransactionsManager.h; sourceTree = "<group>"; };
 		CE2256581CC9057500C5E72E /* TransactionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionsManager.m; path = Transactions/TransactionsManager.m; sourceTree = "<group>"; };
+		CE243BEF1CE07A470082FF8C /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
+		CE243BF11CE0893B0082FF8C /* login_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_background@2x.png"; sourceTree = "<group>"; };
 		CE5A00031CBF863B005C8F58 /* SafePocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafePocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A00071CBF863B005C8F58 /* SafePocketUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafePocketUITests.m; sourceTree = "<group>"; };
 		CE5A00091CBF863B005C8F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 		CEF9C33E1CC4AC390024FBE6 /* UIResources */ = {
 			isa = PBXGroup;
 			children = (
+				CE243BF11CE0893B0082FF8C /* login_background@2x.png */,
+				CE243BEF1CE07A470082FF8C /* background@2x.jpg */,
 				CE5DAF151CC4CFD100EA2DAE /* down@2x.png */,
 				CE5DAF131CC4CE1B00EA2DAE /* fingerprint@2x.png */,
 				CEF9C3411CC4ACE50024FBE6 /* logo_aci@2x.png */,
@@ -311,10 +317,12 @@
 			files = (
 				CE5AFFF21CBF863B005C8F58 /* LaunchScreen.storyboard in Resources */,
 				CE5DAF141CC4CE1B00EA2DAE /* fingerprint@2x.png in Resources */,
+				CE243BF01CE07A470082FF8C /* background@2x.jpg in Resources */,
 				CE5AFFEF1CBF863B005C8F58 /* Assets.xcassets in Resources */,
 				CEF9C3421CC4ACE50024FBE6 /* logo_aci@2x.png in Resources */,
 				CE5DAF161CC4CFD100EA2DAE /* down@2x.png in Resources */,
 				CEF9C3401CC4ACBC0024FBE6 /* logo_p@2x.jpg in Resources */,
+				CE243BF21CE0893B0082FF8C /* login_background@2x.png in Resources */,
 				CE5AFFEA1CBF863B005C8F58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

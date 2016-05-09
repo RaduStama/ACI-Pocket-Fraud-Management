@@ -10,9 +10,12 @@
 
 @interface TransactionsManager : NSObject
 
+@property (strong,nonatomic) NSMutableArray *transactions;
+
+
 +(TransactionsManager*)sharedInstance;
 
-
 -(void)requestTransactions;
+
 
 @end

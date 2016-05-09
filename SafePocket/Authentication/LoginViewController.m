@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "TransactionsManager.h"
+#import "TransactionsViewController.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userTextField;
@@ -20,6 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [_userTextField setText:@"test"];
+    [_passTextField setText:@"pungasii"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,6 +30,7 @@
     [super didReceiveMemoryWarning];
 }
 
+// end editing when then user taps the screen
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self endEditing];
@@ -38,32 +42,18 @@
     [_passTextField endEditing:YES];
 }
 
+// the logic happening when the user taps the login button
 - (IBAction)loginBtnPressed:(UIButton *)sender
 {
+    //register a vc callback for the moment the transactions are available
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showTransactions:) name:@"transactions_available" object:nil];
     [[TransactionsManager sharedInstance] requestTransactions];
-    //animate something
-    /*
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *transactionsViewController = [storyboard instantiateViewControllerWithIdentifier:@"transactionsVC"];
-    [self presentViewController:transactionsViewController animated:YES completion:nil];
-     */
 }
 
 -(void)showTransactions:(NSNotification*)notif
 {
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        UIViewController *controller = [UIViewController new];
-        CGRect frame = CGRectMake(30, 30, 200, 50);
-        for (NSString *key in notif.userInfo.allKeys){
-            UITextView *textView = [UITextView new];
-            [textView setText:[notif.userInfo objectForKey:key]];
-            textView.frame = frame;
-            frame.origin.y = frame.origin.y + 60;
-            [controller.view addSubview:textView];
-        }
-        [self presentViewController:controller animated:YES completion:nil];
-    });
+    UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"transactionsVC"];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end
